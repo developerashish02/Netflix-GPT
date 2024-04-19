@@ -10,18 +10,15 @@ const LogIn = () => {
     firstName: "",
   };
 
+  const handleSubmit = (values, { setSubmitting }) => {};
+
   return (
     <div className="bg-black bg-opacity-85 w-full md:w-[80%] lg:w-[30%]  text-white px-4 sm:px-8 md:px-12 py-6 md:py-8 mx-auto rounded-md">
       <h1 className="font-bold text-3xl">{isSignIn ? "Sign In" : "Sign Up"}</h1>
       <Formik
         initialValues={values}
         validate={validateValues}
-        onSubmit={(values, { setSubmitting }) => {
-          setTimeout(() => {
-            alert(JSON.stringify(values, null, 2));
-            setSubmitting(false);
-          }, 400);
-        }}
+        onSubmit={handleSubmit}
       >
         {({
           handleChange,
