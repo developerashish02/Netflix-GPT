@@ -2,9 +2,10 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
-
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import LogIn from "./components/LogIn";
+import { Provider } from "react-redux";
+import appStore from "./store/configureStore";
 
 const appRouter = createBrowserRouter([
   {
@@ -22,6 +23,8 @@ const appRouter = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={appRouter} />
+    <Provider store={appStore}>
+      <RouterProvider router={appRouter} />
+    </Provider>
   </React.StrictMode>
 );
