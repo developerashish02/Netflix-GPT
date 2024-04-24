@@ -16,18 +16,15 @@ const App = () => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
         const { displayName, email, uid } = user;
-
         dispatch(addUserInfo({ displayName, email, uid }));
         navigate("/browse");
       } else {
+        navigate("/login");
       }
     });
   }, []);
   return (
-    <div
-      style={{ backgroundImage: `url(${BACKGROUND_IMG})` }}
-      className="bg-cover bg-center h-screen md:h-auto "
-    >
+    <div className="">
       <Header />
       <Outlet />
     </div>

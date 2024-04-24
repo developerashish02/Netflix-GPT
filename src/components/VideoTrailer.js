@@ -1,17 +1,12 @@
-import { useSelector } from "react-redux";
-import useGetTrailer from "../hooks/UseGetTrailer";
-
-const VideoTrailer = () => {
-  useGetTrailer();
-  const movieTrailer = useSelector((store) => store.movies?.movieTrailer);
-
+const VideoTrailer = ({ videoKey }) => {
   return (
-    <div>
+    <>
       <iframe
-        className="w-screen"
-        src={`https://www.youtube.com/embed/${movieTrailer?.key}?si=lrVflMd-LWNf6FBK`}
+        className="w-screen h-screen aspect-video"
+        src={`https://www.youtube.com/embed/${videoKey}?autoplay=1&mute=1&controls=0`}
+        // allowFullScreen
       ></iframe>
-    </div>
+    </>
   );
 };
 
