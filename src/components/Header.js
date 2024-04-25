@@ -19,7 +19,7 @@ const Header = () => {
   };
 
   return (
-    <div className="bg-gradient-to-b from-black  flex justify-between items-center px-8 py-3 w-full absolute z-10">
+    <div className="bg-gradient-to-b from-black flex justify-between items-center px-8 py-3 w-full absolute z-10">
       <img
         src={LOGO}
         className="h-16 sm:h-20 md:h-24 lg:h-16 xl:h-16 cursor-pointer"

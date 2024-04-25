@@ -2,7 +2,7 @@ const VideoDetails = (props) => {
   const { overview, original_title } = props?.video;
 
   return (
-    <div className="h-screen w-screen flex items-center absolute text-whit bg-gradient-to-r from-black">
+    <div className="h-full aspect-video  flex items-center absolute text-whit bg-gradient-to-r from-black ">
       <div className=" p-12 space-y-4 pt-24 text-white ">
         <h1 className="text-xl font-bold">{original_title}</h1>
         <p className="w-4/12 text-sm font-semibold">{overview}</p>
