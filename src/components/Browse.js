@@ -8,6 +8,7 @@ import AllCategory from "./AllCategory";
 const Browse = () => {
   useGetMovies();
   useGetTrailer();
+
   const movies = useSelector((store) => store.movies?.movies);
   const movieTrailer = useSelector((store) => store.movies?.movieTrailer);
 
